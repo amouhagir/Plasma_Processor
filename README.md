@@ -7,7 +7,7 @@ Ce dépôt git est dédié à la modification (matérielle et logicielle) du pro
 * [Memory map](DOCUMENTATION/MEMORY-MAP.md)
 
 
- * [Slide](DOCUMENTATION/EN211_slide.pdf)
+ * [Slide](DOCUMENTATION/EN211_Slide.pdf)
 
 # **Documentation du projet : Système de traitement audio**
 
