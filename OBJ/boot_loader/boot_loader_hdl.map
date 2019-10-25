@@ -1,0 +1,466 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+InitStack           0x800             ./OBJ/shared/uboot.o
+buffer              0x40              ./OBJ/shared/no_os.o
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000        0x0 ./OBJ/shared/no_os.o
+ .reginfo       0x0000000000000000        0x0 ./OBJ/boot_loader/main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .text set to 0x0
+LOAD ./OBJ/shared/uboot.o
+LOAD ./OBJ/shared/no_os.o
+LOAD ./OBJ/boot_loader/main.o
+                0x0000000000400000                PROVIDE (__executable_start, 0x400000)
+                0x0000000000400000                . = 0x400000
+
+.interp
+ *(.interp)
+
+.reginfo        0x0000000000400000       0x18
+ *(.reginfo)
+ .reginfo       0x0000000000400000       0x18 ./OBJ/shared/uboot.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.dynamic
+ *(.dynamic)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+
+.rela.text
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+
+.rela.rodata
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro* .rela.gnu.linkonce.d.rel.ro.*)
+
+.rel.data
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+
+.rela.data
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+
+.rel.tdata
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+
+.rela.tdata
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+
+.rel.tbss
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+
+.rela.tbss
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.dyn
+ *(.rel.dyn)
+
+.rel.sdata
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+
+.rela.sdata
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+
+.rel.sbss
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+
+.rela.sbss
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+
+.rel.sdata2
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+
+.rela.sdata2
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+
+.rel.sbss2
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+
+.rela.sbss2
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+
+.rel.bss
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.bss
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x0000000000000000     0x10c0
+                0x0000000000000000                _ftext = .
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000000000       0x3c ./OBJ/shared/uboot.o
+                0x0000000000000000                entry
+ .text          0x000000000000003c      0x9ec ./OBJ/shared/no_os.o
+                0x000000000000003c                putchar
+                0x00000000000003e0                print
+                0x0000000000000060                puts
+                0x00000000000006e0                print_int
+                0x000000000000015c                itoa3
+                0x00000000000000dc                print_hex
+ .text          0x0000000000000a28      0x698 ./OBJ/boot_loader/main.o
+                0x0000000000000d00                ProgramExec
+                0x0000000000000a28                my_printf
+                0x0000000000000b40                wait_data_quiet
+                0x0000000000000cb4                flush_input_data
+                0x0000000000000b64                print_err
+                0x0000000000000ae8                kbhit
+                0x0000000000000aa4                my_printh
+                0x0000000000000d40                ReceiveProgram
+                0x0000000000000af8                getch
+                0x0000000000000b1c                wait_data
+                0x0000000000000f2c                main
+                0x0000000000000a58                my_printfh
+ *(.gnu.warning)
+ *(.mips16.fn.*)
+ *(.mips16.call.*)
+
+.fini
+ *(.fini)
+                0x00000000000010c0                PROVIDE (__etext, .)
+                0x00000000000010c0                PROVIDE (_etext, .)
+                0x00000000000010c0                PROVIDE (etext, .)
+
+.rodata         0x00000000000010c0      0x1dc
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00000000000010c0      0x1dc ./OBJ/boot_loader/main.o
+                                        0x1e0 (size before relaxing)
+
+.rodata1
+ *(.rodata1)
+
+.sdata2
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x000000000000129c                . = .
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x000000000000129c        0x0
+                0x000000000000129c                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x000000000000129c                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x000000000000129c        0x0
+                0x000000000000129c                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x000000000000129c                PROVIDE (__init_array_end, .)
+
+.fini_array     0x000000000000129c        0x0
+                0x000000000000129c                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x000000000000129c                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.data           0x000000000000129c        0x0
+                0x000000000000129c                _fdata = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000000000000129c        0x0 ./OBJ/shared/uboot.o
+ .data          0x000000000000129c        0x0 ./OBJ/shared/no_os.o
+ .data          0x000000000000129c        0x0 ./OBJ/boot_loader/main.o
+
+.data1
+ *(.data1)
+
+.got.plt
+ *(.got.plt)
+                0x000000000000129c                . = .
+                0x0000000000009290                _gp = (ALIGN (0x10) + 0x7ff0)
+
+.got
+ *(.got)
+
+.sdata
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+
+.lit8
+ *(.lit8)
+
+.lit4
+ *(.lit4)
+                0x000000000000129c                _edata = .
+                0x000000000000129c                PROVIDE (edata, .)
+                0x000000000000129c                __bss_start = .
+                0x000000000000129c                _fbss = .
+
+.sbss
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+
+.bss            0x00000000000012a0      0x840
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000000000012a0        0x0 ./OBJ/shared/uboot.o
+ .bss           0x00000000000012a0        0x0 ./OBJ/shared/no_os.o
+ .bss           0x00000000000012a0        0x0 ./OBJ/boot_loader/main.o
+ *(COMMON)
+ COMMON         0x00000000000012a0      0x800 ./OBJ/shared/uboot.o
+                0x00000000000012a0                InitStack
+ COMMON         0x0000000000001aa0       0x40 ./OBJ/shared/no_os.o
+                0x0000000000001aa0                buffer
+                0x0000000000001ae0                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0000000000001ae0                . = ALIGN (0x4)
+                0x0000000000001ae0                . = ALIGN (0x4)
+                0x0000000000001ae0                _end = .
+                0x0000000000001ae0                PROVIDE (end, .)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x24
+ *(.comment)
+ .comment       0x0000000000000000       0x12 ./OBJ/shared/no_os.o
+ .comment       0x0000000000000012       0x12 ./OBJ/boot_loader/main.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+                0x0000000000000000       0x10
+ *(.gnu.attributes)
+ .gnu.attributes
+                0x0000000000000000       0x10 ./OBJ/shared/no_os.o
+ .gnu.attributes
+                0x0000000000000010       0x10 ./OBJ/boot_loader/main.o
+
+.gptab.sdata
+ *(.gptab.data)
+ *(.gptab.sdata)
+
+.gptab.sbss
+ *(.gptab.bss)
+ *(.gptab.sbss)
+
+.mdebug.abi32   0x0000000000000020        0x0
+ *(.mdebug.abi32)
+ .mdebug.abi32  0x0000000000000020        0x0 ./OBJ/shared/no_os.o
+ .mdebug.abi32  0x0000000000000020        0x0 ./OBJ/boot_loader/main.o
+
+.mdebug.abiN32
+ *(.mdebug.abiN32)
+
+.mdebug.abi64
+ *(.mdebug.abi64)
+
+.mdebug.abiO64
+ *(.mdebug.abiO64)
+
+.mdebug.eabi32
+ *(.mdebug.eabi32)
+
+.mdebug.eabi64
+ *(.mdebug.eabi64)
+
+.gcc_compiled_long32
+ *(.gcc_compiled_long32)
+
+.gcc_compiled_long64
+ *(.gcc_compiled_long64)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(./OBJ/boot_loader/boot_loader_hdl.axf elf32-bigmips)
+
+.pdr            0x0000000000000000      0x260
+ .pdr           0x0000000000000000       0x20 ./OBJ/shared/uboot.o
+ .pdr           0x0000000000000020       0xc0 ./OBJ/shared/no_os.o
+ .pdr           0x00000000000000e0      0x180 ./OBJ/boot_loader/main.o
