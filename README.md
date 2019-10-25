@@ -8,7 +8,8 @@ Ce dépôt git est dédié à la modification (matérielle et logicielle) du pro
 
 
  * [Slide](DOCUMENTATION/EN211_Slide.pdf)
-
+ 
+ 
 # **Documentation du projet : Système de traitement audio**
 
 
@@ -27,7 +28,7 @@ Ce dépôt git est dédié à la modification (matérielle et logicielle) du pro
 
 ## Introduction
 
-Cette documentation a pour objectif de détailler le principe de fonctionnement de notre projet constitué d'un système de traitement audio réalisé sur le plasma dans le cadre du cours EN211. 
+Cette documentation a pour objectif de détailler le principe de fonctionnement de notre projet constitué d'un système de traitement audio réalisé sur le plasma dans le cadre du cours EN211 [Plasma_PMOD](https://github.com/madellimac/plasma_pmod). 
 
 ## Manuel d'utilisation
 
