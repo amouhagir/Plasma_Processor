@@ -55,7 +55,11 @@ Cette machine d'états sera bien détaillée dans la suite.
 ### Contrôleur PWM
 
 #### Schéma du controleur
-![Contrôleur PWM](http://oi68.tinypic.com/34eb706.jpg)
+<p align="center">
+  <img src="DOCUMENTATION/SRC/PWM.png"
+       title="Contrôleur PWM">
+       
+</p>
 
 - Entrées :
 	- Clock : Horloge du circuit fourni par un quartz à 50 MHz.
@@ -95,7 +99,11 @@ La machine d'état du contrôleur audio, présentée ci-dessous, se compose prin
  - Play_Forward : Lire le son.
  - Play_Backward : Lire le son en arrière.
 
-![Machine d'états](http://oi63.tinypic.com/20ixqxe.jpg)
+<p align="center">
+  <img src="DOCUMENTATION/SRC/schema.png"
+       title="Machine d'état du traitement audio">
+       
+</p>
 ### Gestion du volume de l'audio
 
 Le volume du son lu par notre contrôleur est géré par un process au sain du *ctrl_pwm*. Le principe est le suivant : On divise l'échantillon audio par la valeur $2^{7-volume}$ où *volume* prend les valeurs 1 ... 6. Sachant que le plasma ne gère pas l'opération de division, on procède par la méthode de décalage à droite. En effet, pour une valeur du volume $n$, on décale à droite la valeur de l'échantillon par $7 - n$.
